@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useFetch} from './hooks/useFetch';
+import UserList from './components/user-list';
+import './App.scss';
+
 
 function App() {
+
+  const [userList, loading, error] = useFetch();
+
+  if (loading) return <h1>Loading...</h1>
+  if (error) return <h1>Error loading App</h1>
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Github Search App
       </header>
+      <UserList userList={userList} />
     </div>
   );
 }

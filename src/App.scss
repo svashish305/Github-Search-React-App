@@ -1,0 +1,32 @@
+@import '~bootstrap/scss/bootstrap';
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 30px;
+}
+
+// custom styles
+.search-input {
+  height: 36px;
+  border-radius: 5px;
+  padding-left: 8px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
